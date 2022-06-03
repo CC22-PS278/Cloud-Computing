@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "d43f3db5-98e4-4893-af83-0a420682577f",
+		"name": "Tanya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"username\": \"severus snape\",\r\n\"email\": \"always@gmail.com\",\r\n\"password\": \"lily123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tanya/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg5MDk1Nzk4NjgzMWZlNzMxZTdiYzciLCJpYXQiOjE2NTMxNTYyNzZ9.TmSj4ePaSWtWDQ4Ta4TUUWdsP8wYY_G89MoJgxLJ-MU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rubeusHagrid@gmail.com\",\r\n    \"password\": \"hagrid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tanya/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg3MjVkZTkwZWY2YWZkM2MwOWUxODciLCJpYXQiOjE2NTMwMjQyNTZ9.z1G1BBAd63Q9vyFdiuoroZ9kMUT9RMyLANgDgbcH47Y",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tanya/user/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update data user [by id]",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg3MjVkZTkwZWY2YWZkM2MwOWUxODciLCJpYXQiOjE2NTMwMjQyNTZ9.z1G1BBAd63Q9vyFdiuoroZ9kMUT9RMyLANgDgbcH47Y",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rubeus hagrid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tanya/user/{userId}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"user",
+								"{userId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user [by id]",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tanya/user/{userId}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"user",
+								"{userId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user [by id]",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tanya/user/{userId}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"user",
+								"{userId}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tiketBus",
+			"item": [
+				{
+					"name": "tiket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "default"
+							},
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMDY0Njl9.KDmWw-A_fNeYNKL-NQlLvp6VNu09KT5AX-1ZzWVDlaU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jenisBus\": \"bus trans\",\r\n    \"desc\": \"ini bus trans kota\",\r\n    \"price\": 5000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tanya/tiket",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"tiket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all tiket",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tanya/tiket/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"tiket",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tiket [bus id]",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tanya/tiket/{tiketId}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"tiket",
+								"{tiketId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update tiket [bus id]",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"jenisBus\": \"Bus reguler\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tanya/tiket/{tiketId}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"tiket",
+								"{tiketId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tiket [bus id]",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tanya/tiket/{tiketId}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"tiket",
+								"{tiketId}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaksi",
+			"item": [
+				{
+					"name": "transaksi",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"628725de90ef6afd3c09e187\",\r\n    \"tiketBus\": [\r\n      {\r\n        \"tiketId\": \"6287014b07b1f0515ab86720\",\r\n        \"quantity\": 2\r\n        },\r\n        {\r\n        \"tiketId\": \"628717b83629f6aab8f2fb77\",\r\n        \"quantity\": 1\r\n        }\r\n\r\n    ],\r\n    \"total\": \"50000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tanya/transaksi",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all transaksi",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tanya/transaksi/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"transaksi",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transaksi [by id]",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tanya/transaksi/{transaksiId}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"transaksi",
+								"{transaksiId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transaksi [by id]",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tanya/transaksi/{transaksiId}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"transaksi",
+								"{transaksiId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update transaksi [by id]",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-jsonToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tanya/transaksi/{transaksiId}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tanya",
+								"transaksi",
+								"{transaksiId}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
