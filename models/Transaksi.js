@@ -1,3 +1,4 @@
+const string = require("@hapi/joi/lib/types/string");
 const mongoose = require("mongoose");
 
 const transaksiSchema = new mongoose.Schema(
@@ -7,10 +8,11 @@ const transaksiSchema = new mongoose.Schema(
       {
         tiketId: {
           type: String,
+          required: true,
         },
-        quantity: {
-          type: Number,
-          default: 1,
+        status: {
+          type: String,
+          required: true,
         },
       },
     ],

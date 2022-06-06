@@ -2,7 +2,7 @@ const jsonToken = require("jsonwebtoken");
 
 module.exports = function (req, res, next) {
   const jwt = req.header("auth-jsonToken");
-  if (!jwt) return res.status(401).send("user cannot access | akses ditolak");
+  if (!jwt) return res.status(401).send("cannot access | akses ditolak");
 
   try {
     const validate = jsonToken.verify(jwt, process.env.key_JWT);

@@ -20,9 +20,12 @@ mongoose.connect(process.env.access_db, () => console.log("check database"));
 //import route
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
-const tiketRoute = require("./routes/TiketBus");
+const tiketRoute = require("./routes/Tiket");
 const transaksiRoute = require("./routes/transaksi");
-// const paymentRoute = require("./routes/payment");
+const busConditionRoute = require("./routes/busCondition");
+//driver and staff route
+const authdriverRoute = require("./routes/authDriver");
+const driverRoute = require("./routes/driver");
 
 //middleware | run when hits routes
 app.use(express.json());
@@ -32,7 +35,9 @@ app.use("/tanya/user", userRoute);
 app.use("/tanya/auth", authRoute);
 app.use("/tanya/tiket", tiketRoute);
 app.use("/tanya/transaksi", transaksiRoute);
-// app.use("/tanya/payment", paymentRoute);
+app.use("/tanya/busCondition", busConditionRoute);
+app.use("/tanya/authDriver", authdriverRoute);
+app.use("/tanya/driver", driverRoute);
 
 // Listen to the App Engine-specified port, or 8080 otherwise
 const PORT = process.env.PORT || 8080;

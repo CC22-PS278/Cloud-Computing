@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0",
-    "title": "Tanya CC22-PS278",
+    "title": "Tanya C22-PS278",
     "contact": {}
   },
-  "host": "https://capstone-cc22-ps278.et.r.appspot.com/",
+  "host": "https://capstone-cc22-ps278.et.r.appspot.com",
   "basePath": "",
   "securityDefinitions": {},
   "schemes": ["http"],
@@ -248,7 +248,7 @@
         }
       }
     },
-    "/tiket/{tiketId}": {
+    "/tiket/{tiket Id}": {
       "delete": {
         "summary": "tiket [bus id]",
         "tags": ["tiketBus"],
@@ -262,13 +262,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "tiketId",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -277,7 +270,9 @@
             "headers": {}
           }
         }
-      },
+      }
+    },
+    "/tiket/{tiket id}": {
       "put": {
         "summary": "update tiket [bus id]",
         "tags": ["tiketBus"],
@@ -300,13 +295,6 @@
             "schema": {
               "$ref": "#/definitions/updatetiket%5Bbusid%5Drequest"
             }
-          },
-          {
-            "name": "tiketId",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -326,13 +314,6 @@
           {
             "name": "auth-jsonToken",
             "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "tiketId",
-            "in": "path",
             "required": true,
             "type": "string",
             "description": ""
@@ -401,7 +382,7 @@
         }
       }
     },
-    "/transaksi/{transaksiId}": {
+    "/transaksi/{transaksi id}": {
       "delete": {
         "summary": "transaksi [by id]",
         "tags": ["transaksi"],
@@ -412,13 +393,6 @@
           {
             "name": "auth-jsonToken",
             "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "transaksiId",
-            "in": "path",
             "required": true,
             "type": "string",
             "description": ""
@@ -441,13 +415,6 @@
           {
             "name": "auth-jsonToken",
             "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "transaksiId",
-            "in": "path",
             "required": true,
             "type": "string",
             "description": ""
@@ -475,8 +442,295 @@
             "description": ""
           },
           {
-            "name": "transaksiId",
-            "in": "path",
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updatetransaksi%5Bbyid%5Drequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/busCondition": {
+      "post": {
+        "summary": "send condition",
+        "tags": ["busCondition"],
+        "operationId": "sendcondition",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/sendconditionrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "get all condition",
+        "tags": ["busCondition"],
+        "operationId": "getallcondition",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/busCondition/{condition id}": {
+      "get": {
+        "summary": "get condition",
+        "tags": ["busCondition"],
+        "operationId": "getcondition",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "condition [by id]",
+        "tags": ["busCondition"],
+        "operationId": "condition[byid]",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "put": {
+        "summary": "condition [by id]",
+        "tags": ["busCondition"],
+        "operationId": "Putcondition[byid]",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/condition%5Bbyid%5Drequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/authDriver/register": {
+      "post": {
+        "summary": "register driver",
+        "tags": ["driver"],
+        "operationId": "registerdriver",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/registerdriverrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/authDriver/login": {
+      "post": {
+        "summary": "login driver",
+        "tags": ["driver"],
+        "operationId": "logindriver",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/logindriverrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/driver": {
+      "get": {
+        "summary": "all driver",
+        "tags": ["driver"],
+        "operationId": "alldriver",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/driver/{driver id}": {
+      "get": {
+        "summary": "driver [by id]",
+        "tags": ["driver"],
+        "operationId": "driver[byid]",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "put": {
+        "summary": "update data [by id]",
+        "tags": ["driver"],
+        "operationId": "updatedata[byid]",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updatedata%5Bbyid%5Drequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "driver [by id]1",
+        "tags": ["driver"],
+        "operationId": "driver[byid]1",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
             "required": true,
             "type": "string",
             "description": ""
@@ -516,8 +770,8 @@
     "loginrequest": {
       "title": "loginrequest",
       "example": {
-        "email": "rubeusHagrid@gmail.com",
-        "password": "hagrid"
+        "email": "joy@gmail.com",
+        "password": "joy123"
       },
       "type": "object",
       "properties": {
@@ -546,53 +800,55 @@
     "tiketrequest": {
       "title": "tiketrequest",
       "example": {
-        "jenisBus": "bus trans",
-        "desc": "ini bus trans kota",
-        "price": 5000
+        "userId": "629d49e3e0e1df05e1db27ed",
+        "koridor": "semarang bawen",
+        "seat": 4,
+        "price": 20000
       },
       "type": "object",
       "properties": {
-        "jenisBus": {
+        "userId": {
           "type": "string"
         },
-        "desc": {
+        "koridor": {
           "type": "string"
+        },
+        "seat": {
+          "type": "integer",
+          "format": "int32"
         },
         "price": {
           "type": "integer",
           "format": "int32"
         }
       },
-      "required": ["jenisBus", "desc", "price"]
+      "required": ["userId", "koridor", "seat", "price"]
     },
     "updatetiket[busid]request": {
       "title": "updatetiket[busid]request",
       "example": {
-        "jenisBus": "Bus reguler"
+        "seat": 3
       },
       "type": "object",
       "properties": {
-        "jenisBus": {
-          "type": "string"
+        "seat": {
+          "type": "integer",
+          "format": "int32"
         }
       },
-      "required": ["jenisBus"]
+      "required": ["seat"]
     },
     "transaksirequest": {
       "title": "transaksirequest",
       "example": {
-        "userId": "628725de90ef6afd3c09e187",
+        "userId": "62975a55639bd97d642f80a8",
         "tiketBus": [
           {
             "tiketId": "6287014b07b1f0515ab86720",
-            "quantity": 2
-          },
-          {
-            "tiketId": "628717b83629f6aab8f2fb77",
-            "quantity": 1
+            "status": "active"
           }
         ],
-        "total": "50000"
+        "total": "10000"
       },
       "type": "object",
       "properties": {
@@ -615,19 +871,180 @@
       "title": "TiketBu",
       "example": {
         "tiketId": "6287014b07b1f0515ab86720",
-        "quantity": 2
+        "status": "active"
       },
       "type": "object",
       "properties": {
         "tiketId": {
           "type": "string"
         },
-        "quantity": {
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": ["tiketId", "status"]
+    },
+    "updatetransaksi[byid]request": {
+      "title": "updatetransaksi[byid]request",
+      "example": {
+        "total": 20000
+      },
+      "type": "object",
+      "properties": {
+        "total": {
           "type": "integer",
           "format": "int32"
         }
       },
-      "required": ["tiketId", "quantity"]
+      "required": ["total"]
+    },
+    "sendconditionrequest": {
+      "title": "sendconditionrequest",
+      "example": {
+        "nomorBus": 123,
+        "koridor": "1 bawen",
+        "halte": "1 KA",
+        "statusPassenger": "sedang",
+        "infoDriver": [
+          {
+            "driverId": "678gjkk",
+            "username": "abc"
+          }
+        ],
+        "infoStaff": [
+          {
+            "staffId": "tgjgj58",
+            "username": "xyz"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "nomorBus": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "koridor": {
+          "type": "string"
+        },
+        "halte": {
+          "type": "string"
+        },
+        "statusPassenger": {
+          "type": "string"
+        },
+        "infoDriver": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InfoDriver"
+          }
+        },
+        "infoStaff": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InfoStaff"
+          }
+        }
+      },
+      "required": ["nomorBus", "koridor", "halte", "statusPassenger", "infoDriver", "infoStaff"]
+    },
+    "InfoDriver": {
+      "title": "InfoDriver",
+      "example": {
+        "driverId": "678gjkk",
+        "username": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "driverId": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "required": ["driverId", "username"]
+    },
+    "InfoStaff": {
+      "title": "InfoStaff",
+      "example": {
+        "staffId": "tgjgj58",
+        "username": "xyz"
+      },
+      "type": "object",
+      "properties": {
+        "staffId": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "required": ["staffId", "username"]
+    },
+    "condition[byid]request": {
+      "title": "condition[byid]request",
+      "example": {
+        "halte": "5 ba"
+      },
+      "type": "object",
+      "properties": {
+        "halte": {
+          "type": "string"
+        }
+      },
+      "required": ["halte"]
+    },
+    "registerdriverrequest": {
+      "title": "registerdriverrequest",
+      "example": {
+        "username": "bellatrix",
+        "email": "bel@gmail.com",
+        "password": "bel123"
+      },
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": ["username", "email", "password"]
+    },
+    "logindriverrequest": {
+      "title": "logindriverrequest",
+      "example": {
+        "email": "bel@gmail.com",
+        "password": "bel123"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": ["email", "password"]
+    },
+    "updatedata[byid]request": {
+      "title": "updatedata[byid]request",
+      "example": {
+        "username": "bellatrixx"
+      },
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        }
+      },
+      "required": ["username"]
     }
   },
   "tags": [
@@ -639,6 +1056,12 @@
     },
     {
       "name": "transaksi"
+    },
+    {
+      "name": "busCondition"
+    },
+    {
+      "name": "driver"
     }
   ]
 }

@@ -1,495 +1,678 @@
 {
-	"info": {
-		"_postman_id": "d43f3db5-98e4-4893-af83-0a420682577f",
-		"name": "Tanya",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "user",
-			"item": [
-				{
-					"name": "register",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "",
-								"value": "",
-								"type": "default",
-								"disabled": true
-							},
-							{
-								"key": "",
-								"value": "",
-								"type": "default",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\"username\": \"severus snape\",\r\n\"email\": \"always@gmail.com\",\r\n\"password\": \"lily123\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/tanya/auth/register",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"auth",
-								"register"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "login",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg5MDk1Nzk4NjgzMWZlNzMxZTdiYzciLCJpYXQiOjE2NTMxNTYyNzZ9.TmSj4ePaSWtWDQ4Ta4TUUWdsP8wYY_G89MoJgxLJ-MU",
-								"type": "default"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"rubeusHagrid@gmail.com\",\r\n    \"password\": \"hagrid\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/tanya/auth/login",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"auth",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "all user",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg3MjVkZTkwZWY2YWZkM2MwOWUxODciLCJpYXQiOjE2NTMwMjQyNTZ9.z1G1BBAd63Q9vyFdiuoroZ9kMUT9RMyLANgDgbcH47Y",
-								"type": "default"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{baseUrl}}/tanya/user/",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"user",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update data user [by id]",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg3MjVkZTkwZWY2YWZkM2MwOWUxODciLCJpYXQiOjE2NTMwMjQyNTZ9.z1G1BBAd63Q9vyFdiuoroZ9kMUT9RMyLANgDgbcH47Y",
-								"type": "default"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"rubeus hagrid\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/tanya/user/{userId}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"user",
-								"{userId}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "user [by id]",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/tanya/user/{userId}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"user",
-								"{userId}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "user [by id]",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/tanya/user/{userId}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"user",
-								"{userId}"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "tiketBus",
-			"item": [
-				{
-					"name": "tiket",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "",
-								"value": "",
-								"type": "default"
-							},
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMDY0Njl9.KDmWw-A_fNeYNKL-NQlLvp6VNu09KT5AX-1ZzWVDlaU",
-								"type": "default"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"jenisBus\": \"bus trans\",\r\n    \"desc\": \"ini bus trans kota\",\r\n    \"price\": 5000\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/tanya/tiket",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"tiket"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "all tiket",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/tanya/tiket/",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"tiket",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "tiket [bus id]",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/tanya/tiket/{tiketId}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"tiket",
-								"{tiketId}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update tiket [bus id]",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": " {\r\n    \"jenisBus\": \"Bus reguler\"\r\n }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/tanya/tiket/{tiketId}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"tiket",
-								"{tiketId}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "tiket [bus id]",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/tanya/tiket/{tiketId}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"tiket",
-								"{tiketId}"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "transaksi",
-			"item": [
-				{
-					"name": "transaksi",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"userId\": \"628725de90ef6afd3c09e187\",\r\n    \"tiketBus\": [\r\n      {\r\n        \"tiketId\": \"6287014b07b1f0515ab86720\",\r\n        \"quantity\": 2\r\n        },\r\n        {\r\n        \"tiketId\": \"628717b83629f6aab8f2fb77\",\r\n        \"quantity\": 1\r\n        }\r\n\r\n    ],\r\n    \"total\": \"50000\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/tanya/transaksi",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"transaksi"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "all transaksi",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/tanya/transaksi/",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"transaksi",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "transaksi [by id]",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/tanya/transaksi/{transaksiId}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"transaksi",
-								"{transaksiId}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "transaksi [by id]",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/tanya/transaksi/{transaksiId}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"transaksi",
-								"{transaksiId}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update transaksi [by id]",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "auth-jsonToken",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/tanya/transaksi/{transaksiId}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"tanya",
-								"transaksi",
-								"{transaksiId}"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	]
+  "info": {
+    "_postman_id": "d43f3db5-98e4-4893-af83-0a420682577f",
+    "name": "Tanya",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "",
+                "value": "",
+                "type": "default",
+                "disabled": true
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "default",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"username\": \"severus snape\",\r\n\"email\": \"always@gmail.com\",\r\n\"password\": \"lily123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/auth/register",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg5MDk1Nzk4NjgzMWZlNzMxZTdiYzciLCJpYXQiOjE2NTMxNTYyNzZ9.TmSj4ePaSWtWDQ4Ta4TUUWdsP8wYY_G89MoJgxLJ-MU",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"joy@gmail.com\",\r\n    \"password\": \"joy123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg3MjVkZTkwZWY2YWZkM2MwOWUxODciLCJpYXQiOjE2NTMwMjQyNTZ9.z1G1BBAd63Q9vyFdiuoroZ9kMUT9RMyLANgDgbcH47Y",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/user/",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "user", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update data user [by id]",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg3MjVkZTkwZWY2YWZkM2MwOWUxODciLCJpYXQiOjE2NTMwMjQyNTZ9.z1G1BBAd63Q9vyFdiuoroZ9kMUT9RMyLANgDgbcH47Y",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"rubeus hagrid\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/user/{userId}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "user", "{userId}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user [by id]",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/user/{userId}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "user", "{userId}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user [by id]",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/user/{userId}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "user", "{userId}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "tiketBus",
+      "item": [
+        {
+          "name": "tiket",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "",
+                "value": "",
+                "type": "default"
+              },
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMDY0Njl9.KDmWw-A_fNeYNKL-NQlLvp6VNu09KT5AX-1ZzWVDlaU",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": \"629d49e3e0e1df05e1db27ed\",\r\n    \"koridor\": \"semarang bawen\",\r\n    \"seat\": 4,\r\n    \"price\": 20000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/tiket",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "tiket"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all tiket",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/tiket/",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "tiket", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "tiket [bus id]",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/tiket/{tiket Id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "tiket", "{tiket Id}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update tiket [bus id]",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n    \"seat\": 3\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/tiket/{tiket id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "tiket", "{tiket id}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "tiket [bus id]",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/tiket/{tiket id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "tiket", "{tiket id}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "transaksi",
+      "item": [
+        {
+          "name": "transaksi",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": \"62975a55639bd97d642f80a8\",\r\n    \"tiketBus\": [\r\n      {\r\n        \"tiketId\": \"6287014b07b1f0515ab86720\",\r\n        \"status\": \"active\"\r\n        }\r\n    ],\r\n    \"total\": \"10000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/transaksi",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "transaksi"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all transaksi",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/transaksi/",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "transaksi", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "transaksi [by id]",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/transaksi/{transaksi id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "transaksi", "{transaksi id}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "transaksi [by id]",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/transaksi/{transaksi id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "transaksi", "{transaksi id}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update transaksi [by id]",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"total\": 20000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/transaksi/{transaksi id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "transaksi", "{transaksi id}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "busCondition",
+      "item": [
+        {
+          "name": "send condition",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nomorBus\": 123,\r\n    \"koridor\": \"1 bawen\",\r\n    \"halte\" : \"1 KA\",\r\n    \"statusPassenger\": \"sedang\",\r\n    \"infoDriver\": [\r\n        {\r\n            \"driverId\": \"678gjkk\",\r\n            \"username\":  \"abc\"\r\n        }\r\n        ],\r\n    \"infoStaff\" : [\r\n        {\r\n            \"staffId\": \"tgjgj58\",\r\n            \"username\": \"xyz\"\r\n        }\r\n        ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/busCondition",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "busCondition"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get condition",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjk3NWE1NTYzOWJkOTdkNjQyZjgwYTgiLCJpYXQiOjE2NTQ0NzIyMDh9.CQnK0fgs-ty4Rp9mMnqOOnnYqVZ1Gsgo1pehJ7M5h5I",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/busCondition/{condition id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "busCondition", "{condition id}"],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all condition",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjk3NWE1NTYzOWJkOTdkNjQyZjgwYTgiLCJpYXQiOjE2NTQ0NzIyMDh9.CQnK0fgs-ty4Rp9mMnqOOnnYqVZ1Gsgo1pehJ7M5h5I",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/busCondition/",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "busCondition", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "condition [by id]",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjk3NWE1NTYzOWJkOTdkNjQyZjgwYTgiLCJpYXQiOjE2NTQ0NzIyMDh9.CQnK0fgs-ty4Rp9mMnqOOnnYqVZ1Gsgo1pehJ7M5h5I",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/busCondition/{condition id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "busCondition", "{condition id}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "condition [by id]",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjg2ZTA3NDU2OTI5OGQxOThkMzkxNmEiLCJpYXQiOjE2NTMwMjE1OTR9.QqJcRJ9XIJOXYsK2jwuLf3xpCHJpmQjUTU-6qPTaG88",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"halte\": \"5 ba\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/busCondition/{condition id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "busCondition", "{condition id}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "driver",
+      "item": [
+        {
+          "name": "register driver",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"username\": \"bellatrix\",\r\n\"email\": \"bel@gmail.com\",\r\n\"password\": \"bel123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/authDriver/register",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "authDriver", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login driver",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"bel@gmail.com\",\r\n    \"password\": \"bel123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/authDriver/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "authDriver", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all driver",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkOTY0NzBhZjQzZmZiY2IxMWQwYTgiLCJpYXQiOjE2NTQ0OTQ5MDF9.LGcMCMRgZ77HPJkAUn4UttvQW-KcI5ByNhamPepjnmc",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/driver/",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "driver", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "driver [by id]",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkOTY0NzBhZjQzZmZiY2IxMWQwYTgiLCJpYXQiOjE2NTQ0OTQ5MDF9.LGcMCMRgZ77HPJkAUn4UttvQW-KcI5ByNhamPepjnmc",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/driver/{driver id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "driver", "{driver id}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update data [by id]",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkOTY0NzBhZjQzZmZiY2IxMWQwYTgiLCJpYXQiOjE2NTQ0OTQ5MDF9.LGcMCMRgZ77HPJkAUn4UttvQW-KcI5ByNhamPepjnmc",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"bellatrixx\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/driver/{driver id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "driver", "{driver id}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "driver [by id]",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkOTY0NzBhZjQzZmZiY2IxMWQwYTgiLCJpYXQiOjE2NTQ0OTQ5MDF9.LGcMCMRgZ77HPJkAUn4UttvQW-KcI5ByNhamPepjnmc",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/driver/{driver id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "driver", "{driver id}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
 }
