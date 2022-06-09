@@ -673,6 +673,80 @@
           "response": []
         }
       ]
+    },
+    {
+      "name": "prediksi",
+      "item": [
+        {
+          "name": "add data",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkNDllM2UwZTFkZjA1ZTFkYjI3ZWQiLCJpYXQiOjE2NTQ2NTU2Njd9.IgXXAJFjHx5UTDzf0sGbzw4eL6HzzfH151STWJu2Grk",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nomorBus\": \"1A\",\r\n    \"halte\": \"2 KA\",\r\n    \"kondisi\": \"padat\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/prediksi",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "prediksi"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update data",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "auth-jsonToken",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkNDllM2UwZTFkZjA1ZTFkYjI3ZWQiLCJpYXQiOjE2NTQ2NTU2Njd9.IgXXAJFjHx5UTDzf0sGbzw4eL6HzzfH151STWJu2Grk",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"halte\": \"2B\",\r\n    \"kondisi\": \"sedang\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tanya/prediksi/{id}",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "prediksi", "{id}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "data [by id]",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/tanya/prediksi/",
+              "host": ["{{baseUrl}}"],
+              "path": ["tanya", "prediksi", ""]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }

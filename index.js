@@ -23,6 +23,7 @@ const authRoute = require("./routes/auth");
 const tiketRoute = require("./routes/Tiket");
 const transaksiRoute = require("./routes/transaksi");
 const busConditionRoute = require("./routes/busCondition");
+const prediksiRoute = require("./routes/prediksi");
 //driver and staff route
 const authdriverRoute = require("./routes/authDriver");
 const driverRoute = require("./routes/driver");
@@ -38,6 +39,7 @@ app.use("/tanya/transaksi", transaksiRoute);
 app.use("/tanya/busCondition", busConditionRoute);
 app.use("/tanya/authDriver", authdriverRoute);
 app.use("/tanya/driver", driverRoute);
+app.use("/tanya/prediksi", prediksiRoute);
 
 // Listen to the App Engine-specified port, or 8080 otherwise
 const PORT = process.env.PORT || 8080;

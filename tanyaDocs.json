@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0",
-    "title": "Tanya C22-PS278",
+    "title": "Tanya CC22-PS278",
     "contact": {}
   },
-  "host": "https://capstone-cc22-ps278.et.r.appspot.com",
+  "host": "https://tanya-ps278.et.r.appspot.com",
   "basePath": "",
   "securityDefinitions": {},
   "schemes": ["http"],
@@ -97,9 +97,9 @@
     },
     "/user/{userId}": {
       "put": {
-        "summary": "update data user [by id]",
+        "summary": "update data user by id",
         "tags": ["user"],
-        "operationId": "updatedatauser[byid]",
+        "operationId": "update data user [byid]",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -164,9 +164,9 @@
         }
       },
       "delete": {
-        "summary": "user [by id]1",
+        "summary": "user [by id]",
         "tags": ["user"],
-        "operationId": "user[byid]1",
+        "operationId": "user [byid]",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -252,7 +252,7 @@
       "delete": {
         "summary": "tiket [bus id]",
         "tags": ["tiketBus"],
-        "operationId": "tiket[busid]",
+        "operationId": "tiket [busid]",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -276,7 +276,7 @@
       "put": {
         "summary": "update tiket [bus id]",
         "tags": ["tiketBus"],
-        "operationId": "updatetiket[busid]",
+        "operationId": "update tiket [busid]",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -305,9 +305,9 @@
         }
       },
       "get": {
-        "summary": "tiket [bus id]1",
+        "summary": "tiket [ by bus id]",
         "tags": ["tiketBus"],
-        "operationId": "tiket[busid]1",
+        "operationId": "tiket [by bus id]",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -362,7 +362,7 @@
       "get": {
         "summary": "all transaksi",
         "tags": ["transaksi"],
-        "operationId": "alltransaksi",
+        "operationId": "all transaksi",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -386,7 +386,7 @@
       "delete": {
         "summary": "transaksi [by id]",
         "tags": ["transaksi"],
-        "operationId": "transaksi[byid]",
+        "operationId": "transaksi [byid]",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -406,9 +406,9 @@
         }
       },
       "get": {
-        "summary": "transaksi [by id]1",
+        "summary": "transaksi [by id]",
         "tags": ["transaksi"],
-        "operationId": "transaksi[byid]1",
+        "operationId": "transaksi [by id]",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -430,7 +430,7 @@
       "put": {
         "summary": "update transaksi [by id]",
         "tags": ["transaksi"],
-        "operationId": "updatetransaksi[byid]",
+        "operationId": "update transaksi [byid]",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -494,7 +494,7 @@
       "get": {
         "summary": "get all condition",
         "tags": ["busCondition"],
-        "operationId": "getallcondition",
+        "operationId": "get all condition",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -722,9 +722,9 @@
         }
       },
       "delete": {
-        "summary": "driver [by id]1",
+        "summary": "driver [by id]",
         "tags": ["driver"],
-        "operationId": "driver[byid]1",
+        "operationId": "driver[byid]",
         "deprecated": false,
         "produces": ["application/json"],
         "parameters": [
@@ -743,11 +743,98 @@
           }
         }
       }
+    },
+    "/prediksi": {
+      "post": {
+        "summary": "add data",
+        "tags": ["prediksi"],
+        "operationId": "adddata",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/adddatarequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "data [by id]",
+        "tags": ["prediksi"],
+        "operationId": "data[byid]",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/prediksi/{id}": {
+      "put": {
+        "summary": "update data",
+        "tags": ["prediksi"],
+        "operationId": "updatedata",
+        "deprecated": false,
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "auth-jsonToken",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updatedatarequest"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
     }
   },
   "definitions": {
     "registerrequest": {
-      "title": "registerrequest",
+      "title": "register request",
       "example": {
         "username": "severus snape",
         "email": "always@gmail.com",
@@ -767,7 +854,7 @@
       },
       "required": ["username", "email", "password"]
     },
-    "loginrequest": {
+    "login request": {
       "title": "loginrequest",
       "example": {
         "email": "joy@gmail.com",
@@ -784,8 +871,8 @@
       },
       "required": ["email", "password"]
     },
-    "updatedatauser[byid]request": {
-      "title": "updatedatauser[byid]request",
+    "update data user [by id] request": {
+      "title": "update data user [by id] request",
       "example": {
         "username": "rubeus hagrid"
       },
@@ -798,7 +885,7 @@
       "required": ["username"]
     },
     "tiketrequest": {
-      "title": "tiketrequest",
+      "title": "tiket request",
       "example": {
         "userId": "629d49e3e0e1df05e1db27ed",
         "koridor": "semarang bawen",
@@ -825,7 +912,7 @@
       "required": ["userId", "koridor", "seat", "price"]
     },
     "updatetiket[busid]request": {
-      "title": "updatetiket[busid]request",
+      "title": "update tiket [busid] request",
       "example": {
         "seat": 3
       },
@@ -839,7 +926,7 @@
       "required": ["seat"]
     },
     "transaksirequest": {
-      "title": "transaksirequest",
+      "title": "transaksi request",
       "example": {
         "userId": "62975a55639bd97d642f80a8",
         "tiketBus": [
@@ -867,8 +954,8 @@
       },
       "required": ["userId", "tiketBus", "total"]
     },
-    "TiketBu": {
-      "title": "TiketBu",
+    "Tiket Bus": {
+      "title": "Tiket Bus",
       "example": {
         "tiketId": "6287014b07b1f0515ab86720",
         "status": "active"
@@ -884,8 +971,8 @@
       },
       "required": ["tiketId", "status"]
     },
-    "updatetransaksi[byid]request": {
-      "title": "updatetransaksi[byid]request",
+    "update transaksi [by id] request": {
+      "title": "update transaksi [by id] request",
       "example": {
         "total": 20000
       },
@@ -898,8 +985,8 @@
       },
       "required": ["total"]
     },
-    "sendconditionrequest": {
-      "title": "sendconditionrequest",
+    "send condition request": {
+      "title": "send condition request",
       "example": {
         "nomorBus": 123,
         "koridor": "1 bawen",
@@ -982,8 +1069,8 @@
       },
       "required": ["staffId", "username"]
     },
-    "condition[byid]request": {
-      "title": "condition[byid]request",
+    "condition [by id] request": {
+      "title": "condition [by id] request",
       "example": {
         "halte": "5 ba"
       },
@@ -995,8 +1082,8 @@
       },
       "required": ["halte"]
     },
-    "registerdriverrequest": {
-      "title": "registerdriverrequest",
+    "register driver request": {
+      "title": "register driver request",
       "example": {
         "username": "bellatrix",
         "email": "bel@gmail.com",
@@ -1016,8 +1103,8 @@
       },
       "required": ["username", "email", "password"]
     },
-    "logindriverrequest": {
-      "title": "logindriverrequest",
+    "login driver request": {
+      "title": "login driver request",
       "example": {
         "email": "bel@gmail.com",
         "password": "bel123"
@@ -1033,8 +1120,8 @@
       },
       "required": ["email", "password"]
     },
-    "updatedata[byid]request": {
-      "title": "updatedata[byid]request",
+    "update data [by id] request": {
+      "title": "update data [by id] request",
       "example": {
         "username": "bellatrixx"
       },
@@ -1045,6 +1132,44 @@
         }
       },
       "required": ["username"]
+    },
+    "add data request": {
+      "title": "add data request",
+      "example": {
+        "nomorBus": "1A",
+        "halte": "2 KA",
+        "kondisi": "padat"
+      },
+      "type": "object",
+      "properties": {
+        "nomorBus": {
+          "type": "string"
+        },
+        "halte": {
+          "type": "string"
+        },
+        "kondisi": {
+          "type": "string"
+        }
+      },
+      "required": ["nomorBus", "halte", "kondisi"]
+    },
+    "updatedatarequest": {
+      "title": "update data request",
+      "example": {
+        "halte": "2B",
+        "kondisi": "sedang"
+      },
+      "type": "object",
+      "properties": {
+        "halte": {
+          "type": "string"
+        },
+        "kondisi": {
+          "type": "string"
+        }
+      },
+      "required": ["halte", "kondisi"]
     }
   },
   "tags": [
@@ -1062,6 +1187,9 @@
     },
     {
       "name": "driver"
+    },
+    {
+      "name": "prediksi"
     }
   ]
 }
