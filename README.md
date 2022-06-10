@@ -3,12 +3,6 @@ REST API for tanya mobile app <br/>
 Base url: https://tanya-ps278.et.r.appspot.com/ <br/>
 Api documentation: https://tanya-ps278.et.r.appspot.com/tanyaDocs <br/>
 
-* Create database using mongoDB atlas, then get access key
-* install the packages contained in the package.json file
-* Using jsonwebtoken for authentication 
-* Swagger UI for API documentation
-* Google App Engine is used to deploy the app
-
 -----------------------------------------------------------------------
 
 ## Create REST APIs
