@@ -3,6 +3,8 @@ REST API for tanya mobile app <br/>
 Base url: https://tanya-ps278.et.r.appspot.com/ <br/>
 Api documentation: https://tanya-ps278.et.r.appspot.com/tanyaDocs <br/>
 
+* access tanya API endpoint: baseURL/tanya/[endpoint]
+
 -----------------------------------------------------------------------
 
 ## Create REST APIs
