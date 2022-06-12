@@ -23,6 +23,5 @@ Api documentation: https://tanya-ps278.et.r.appspot.com/tanyaDocs <br/>
 ## Deploy tanya APIs to Google App Engine
 1. install Google SDK
 2. create app.yaml 
-3. gcloud init
-4. gcloud app deploy
+3. deploy the app
 5. and get the URL to access API endpoints
