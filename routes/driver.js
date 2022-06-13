@@ -2,9 +2,6 @@ const router = require("express").Router();
 const Driver = require("../models/Driver");
 const verified = require("./verify");
 
-//GET | req ke user -> provide skema user
-//POST | dpt req dari user/client
-
 //UPDATE data driver
 router.put("/:driverId", verified, async (req, res) => {
   try {
