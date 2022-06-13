@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-//pilih tiket
+//book tiket
 const tiketSchema = new mongoose.Schema(
   {
     userId: {
