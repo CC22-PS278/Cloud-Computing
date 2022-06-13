@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-//pilih tiket
+//post driver-put driver per halte-get user
 const kondisiSchema = new mongoose.Schema(
   {
     nomorBus: {
