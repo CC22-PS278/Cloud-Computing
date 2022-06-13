@@ -36,14 +36,4 @@ router.get("/:uniqueId", verified, async (req, res) => {
   }
 });
 
-//GET all transaksi
-router.get("/", verified, async (req, res) => {
-  try {
-    const allKondisi = await prediksi.find();
-    res.json(allKondisi);
-  } catch (err) {
-    res.json({ message: "not found" });
-  }
-});
-
 module.exports = router;
