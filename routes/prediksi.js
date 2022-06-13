@@ -12,7 +12,7 @@ router.post("/", verified, async (req, res) => {
     const Prediksi = await addPrediksi.save();
     res.status(200).json(Prediksi);
   } catch (err) {
-    res.status(500).json({ message: "input data transaksi!" });
+    res.status(500).json({ message: "input prediksi-kondisi bus!" });
   }
 });
 
@@ -22,7 +22,7 @@ router.put("/:uniqueId", verified, async (req, res) => {
     const updateKondisi = await prediksi.findByIdAndUpdate(req.params.uniqueId, { $set: req.body }, { new: true });
     res.status(200).json(updateKondisi);
   } catch (err) {
-    res.status(500).json({ message: "update kondisi bus!" });
+    res.status(500).json({ message: "update prediksi-kondisi bus!" });
   }
 });
 
