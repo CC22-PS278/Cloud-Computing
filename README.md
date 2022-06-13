@@ -10,7 +10,7 @@ Api documentation: https://tanya-ps278.et.r.appspot.com/tanyaDocs <br/>
 ## Create REST APIs
 1. Create database using mongoDB atlas, then get access key
 2. install the packages contained in the package.json file
-3. Using jsonwebtoken for authentication 
+3. Using jsonwebtoken for authorization
 
 ## Create API documentation using Swagger
 1. run $ npm install swagger-ui-express
