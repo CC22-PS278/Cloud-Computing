@@ -12,7 +12,7 @@ router.post("/", verified, async (req, res) => {
     const Tiket = await addTiket.save();
     res.status(200).json(Tiket);
   } catch (err) {
-    res.status(500).json({ message: "input data tiket BUSSS!" });
+    res.status(500).json({ message: "input data tiket Bus!" });
   }
 });
 
